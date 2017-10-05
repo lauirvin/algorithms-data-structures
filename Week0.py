@@ -22,8 +22,6 @@ def removeChar():
         print(strLength)
 
 # 2. Read from the keyboard a list of positive integers, for example: 1, 4, 7, 9
-# a. Write a function that prints the binary representation of the numbers in the list, for the example above it is: 1: 0001 4: 0100 7: 0111 9: 1001
-
 
 def binaryRep():
     inputString = (input("Enter a list of positive integers: "))
@@ -41,6 +39,7 @@ def binaryRep():
     print("If you have entered alphanumeric characters, we have removed it from your list."), time.sleep(1)
     newList = list(map(int, newList))
     print("Your new list is: ", newList), time.sleep(1)
+    # a. Write a function that prints the binary representation of the numbers in the list, for the example above it is: 1: 0001 4: 0100 7: 0111 9: 1001
     binaryList = list(map(bin, newList))
     print("Your list in binary is: "), time.sleep(2)
     print(binaryList)
