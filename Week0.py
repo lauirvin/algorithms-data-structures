@@ -23,7 +23,8 @@ def removeChar():
 
 # 2. Read from the keyboard a list of positive integers, for example: 1, 4, 7, 9
 
-def binaryRep():
+
+def ReadKeyboard():
     inputString = (input("Enter a list of positive integers: "))
     firstList = list(inputString)
     print("You have entered: ", firstList)
@@ -40,8 +41,29 @@ def binaryRep():
     newList = list(map(int, newList))
     print("Your new list is: ", newList), time.sleep(1)
     # a. Write a function that prints the binary representation of the numbers in the list, for the example above it is: 1: 0001 4: 0100 7: 0111 9: 1001
-    binaryList = list(map(bin, newList))
-    print("Your list in binary is: "), time.sleep(2)
-    print(binaryList)
+    def binaryRep():
+        intLiteral = list(map(bin, newList))
+        binaryList = []
+        for i in intLiteral:
+            binaryList.append(i[2:])
+        print("Your list in binary is: "), time.sleep(2)
+        print(binaryList)
 
-binaryRep()
+
+    # b. Print the numbers from the previous list that are palindromes. For example, 9: 1001 is a palindrome.
+        def palindromes():
+            reversedBinary = []
+            for i in binaryList:
+                reversedBinary.append(i[::-1])
+                compare = set(binaryList) & set(reversedBinary)
+            if bool(compare) == True:
+                print("These are the palindromes in this binary list: ")
+                print(compare)
+            else:
+                print("There is no palindrome in this binary list")
+
+        palindromes()
+    binaryRep()
+ReadKeyboard()
+
+
