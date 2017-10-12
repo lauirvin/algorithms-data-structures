@@ -25,4 +25,30 @@ def mergeStrings():
     mergedString = ''.join(mergedStringList)
     print("Your combined string is: ", mergedString)
 
-mergeStrings()
+#mergeStrings()
+
+# 2. Check if a 3 digit number is an Armstrong number. An Armstrong number of three digits is an integer such that the sum of the cubes of its digits is equal to the number itself.
+
+def armstrongNumber():
+    number = input("Input a 3 digit number: ")
+    numberList = []
+    
+    if len(number) < 3:
+        print("Your number is not a 3 digit number.")
+    else:
+        for char in number:
+            numberList.append(char)
+            number = int(number)
+            
+    firstNumber = int(numberList[0])**3
+    secondNumber = int(numberList[1])**3
+    thirdNumber = int(numberList[2])**3
+    combinedNumbers = firstNumber + secondNumber + thirdNumber
+    
+    if number == combinedNumbers:
+        print("Yes")
+    else:
+        print("No")
+        
+            
+#armstrongNumber()
