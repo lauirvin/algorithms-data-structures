@@ -2,9 +2,10 @@
 
 # 1. Read the degree of two polynomials and their coefficients, all integers, from the standard input.
 
-
+# a) Write the pseudocode for adding two polynomials - Written out in Python for algorithm testing.
 def polynomials(p1, p2, degree1, degree2):
     output = []
+    
     if degree1 < degree2:
         output.insert(0, p2[0])
         degreeDifference = degree2 - degree1
@@ -17,6 +18,5 @@ def polynomials(p1, p2, degree1, degree2):
 
     print("The Res is: ", output)
     print("The Degree is: ", finalDegree)
-
 
 polynomials([3,1,9], [2,1,2,1], 2, 3)
