@@ -1,18 +1,22 @@
-#Week 2 Lab
+# Week 2 Lab
 
-#1. Read the degree of two polynomials and their coefficients, all integers, from the standard input.
+# 1. Read the degree of two polynomials and their coefficients, all integers, from the standard input.
 
-p1 = [3,1,9]
-p2 = [2,1,2,1]
-degree1 = 2
-degree2 = 3
-finalDegree = 0
 
-if degree1 < degree2:
-    finalDegree = degree2 - degree1
-elif degree2 < degree1:
-    finalDegree = degree1 - degree2
+def polynomials(p1, p2, degree1, degree2):
+    output = []
+    if degree1 < degree2:
+        output.insert(0, p2[0])
+        degreeDifference = degree2 - degree1
+        output = output + [j + i for j, i in zip(p1, p2[degreeDifference:])]
+        finalDegree = degree2
+    elif degree2 < degree1:
+        degreeDifference = degree1 - degree2
+        output = output + [j + i for j, i in zip(p1[degreeDifference:], p2)]
+        finalDegree = degree1
 
-output = [j + i for j,i in zip(p1[,p2)]
+    print("The Res is: ", output)
+    print("The Degree is: ", finalDegree)
 
-print(output)
+
+polynomials([3,1,9], [2,1,2,1], 2, 3)
