@@ -31,13 +31,10 @@ def polynomialMultiplication(p1, p2, degree1, degree2):
     res = [0] * (degree1 + degree2 + 1)
     print(res)
 
-    for i in p1:
-        res = i + j
-        res = res[i + j] + (p1**i * p2**j)
-        for j in p2:
-            res = i + j
-            res = res[i + j] + (p1**i * p2**j)
-
+    for i in range(len(p1)):
+        for j in range(len(p2)):
+            res[i+j] = res[i+j] + (p1[i] * p2[j])
+    
     print(res)
 
 
