@@ -1,7 +1,7 @@
 # Week 0 Lab
 
 # 1. Write a function that deletes a substring from a given character string, specifying the beginning position and the length of the substring.
-
+import unittest
 
 def removeChar():
     theString = input("Enter String: ")
