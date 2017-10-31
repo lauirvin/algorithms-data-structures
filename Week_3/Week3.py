@@ -25,6 +25,7 @@ a = input("Please enter a string you want to mirror: ")
 print(reverseOrder())
 
 
+
 # 2. Write a recursive version of linear search on an array of integers. What is the time complexity of the algorithm? Use the BigO notation to express it.
 
 def linearSearch(l, target):
