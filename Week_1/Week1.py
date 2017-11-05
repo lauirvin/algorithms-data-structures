@@ -1,10 +1,9 @@
 # Week 1 Lab
 
 # 1. Write a method that combines two strings, by taking one character from the first string, then one from the second string and so on. Once one string has no characters left it should carry on with the other string.
+import unittest
 
-def mergeStrings():
-    string1 = input("Please enter String 1: ")
-    string2 = input("Please enter string 2: ")
+def mergeStrings(string1, string2):
     string1List = []
     string2List = []
 
@@ -52,3 +51,15 @@ def armstrongNumber():
         
             
 #armstrongNumber()
+
+class IsAnagramTests(unittest.TestCase):
+
+    def testOne(self):
+        self.assertEquals(mergeStrings("diana","anaid"))
+
+def main():
+    unittest.main()
+
+if __name__ == '__main__':
+    
+    main()

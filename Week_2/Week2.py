@@ -4,6 +4,7 @@
 
 # a) Write the pseudocode for adding two polynomials - Written out in Python for algorithm testing.
 
+import unittest
 
 def polynomialAddition(p1, p2, degree1, degree2):
     output = []
@@ -36,6 +37,18 @@ def polynomialMultiplication(p1, p2, degree1, degree2):
             res[i + j] = res[i + j] + (p1[i] * p2[j])
 
     print(res)
+    #return (res)
     
 
 
+class IsAnagramTests(unittest.TestCase):
+
+    def testOne(self):
+        self.assertTrue(polynomialMultiplication([3,1,9], [2,1,2,1], 2, 3))
+
+def main():
+    unittest.main()
+
+if __name__ == '__main__':
+    
+    main()
