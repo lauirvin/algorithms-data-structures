@@ -5,6 +5,7 @@ class BinTreeNode(object):
         self.value = value
         self.left = None
         self.right = None
+        self.parent = None
 
 
 def tree_insert(tree, item):
@@ -14,11 +15,13 @@ def tree_insert(tree, item):
         if(item < tree.value):
             if(tree.left == None):
                 tree.left = BinTreeNode(item)
+                tree.left.parent = tree
             else:
                 tree_insert(tree.left, item)
         else:
             if(tree.right == None):
                 tree.right = BinTreeNode(item)
+                tree.right.parent = tree
             else:
                 tree_insert(tree.right, item)
     return tree
@@ -28,43 +31,42 @@ def tree_insert(tree, item):
 def searchNode(tree, target):
     if tree.value == target:
         return tree
-    elif target > tree.value:
+    elif target < tree.value:
         return searchNode(tree.left, target)
     else:
         return searchNode(tree.right, target)
 
-
-def deleteNode(self, value):
+def deleteNode(tree, value):
     parent = None
-    node = self.searchNode(value)
+    node = searchNode(tree, value)
     
     #case 1: data not found
-    if node is None or node.value != data:
+    if node is None or node.value != value:
         return False
 
     #case 2: no children
     elif node.left is None and node.right is None:
-        if data < parent.value:
-            parent.left = None
+        if value < node.parent.value:
+            node.parent.left = None
         else:
-            parent.right = None
+            node.parent.right = None
         return True
 
     #case 3: left child only
 
     elif node.left and node.right is None:
-        if data < parent.value:
-            parent.left = node.left
+        if value < node.parent.value:
+            node.parent.left = node.left
         else:
-            parent.right = node.left
+            node.parent.right = node.left
         return True
 
     #case 4: remove-node has right child only
     elif node.left is None and node.right:
-        if data < parent.value:
-            parent.left = node.right
+        if value < node.parent.value:
+            node.parent.left = node.right
         else:
-            parent.right = node.right
+            node.parent.right = node.right
         return True
 
     #case 5: remove-node has left and right children
@@ -125,6 +127,6 @@ if __name__ == '__main__':
     tree_insert(t, 3)
     tree_insert(t, 4)
     tree_insert(t, 11)
-    searchNode(t, 11)
-    #deleteNode(t, 6)  # deleting the node 11
+    #print(searchNode(t, 11).value) - search value
+    deleteNode(t, 4) # deleting the node 11
     in_order(t)
