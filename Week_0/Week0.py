@@ -19,7 +19,7 @@ def removeChar():
         print("The length of your new string is:")
         print(strLength)
 
-# removeChar()
+removeChar()
 # 2. Read from the keyboard a list of positive integers, for example: 1, 4, 7, 9
 
 
