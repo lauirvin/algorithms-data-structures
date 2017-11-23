@@ -22,8 +22,8 @@ def reverseOrder():
         newString = " ".join(map(str, stringList))
     return newString
 
-# a = input("Please enter a string you want to mirror: ")
-# print(reverseOrder())
+a = input("Please enter a string you want to mirror: ")
+print(reverseOrder())
 
 
 

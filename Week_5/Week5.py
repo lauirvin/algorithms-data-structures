@@ -53,5 +53,7 @@ if __name__ == '__main__':
     l.insert(None, Node(4))
     l.insert(l.head, Node(6))
     l.insert(l.head, Node(8))
-    l.delete(13)
+    l.insert(l.head, Node(8))
+    l.insert(l.head, Node(8))
+    l.delete(8)
     l.display()
