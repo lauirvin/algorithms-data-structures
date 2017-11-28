@@ -30,7 +30,6 @@ class Graph:
     def add_vertex(self, vertex):
         if vertex not in self.graphDict:
             self.graphDict[vertex] = []
-            return("Vertex created")
 
     def add_directed_edge(self, v1, v2):
         if v1 in self.graphDict:
@@ -65,6 +64,16 @@ class Graph:
 
         return visited
 
+# 3. Implement a function called isPath(v,w), where v∈V and w∈V (V is the set of all nodes in the graph) to check if there is a path between the two given nodes v and w.
+
+    def isPath(self, start_node, end_node):
+        all_nodes = self.depth_first_search(start_node)
+        if start_node and end_node in all_nodes:
+            return True
+        else:
+            return False
+
+
 if __name__ == "__main__":
     g = Graph()
     g.add_vertex("1")
@@ -77,5 +86,8 @@ if __name__ == "__main__":
     g.add_directed_edge("1", "3")
     g.add_directed_edge("2", "5")
     g.add_directed_edge("2", "4")
+
     print(g.display())
     print(g.depth_first_search("1"))
+    print(g.isPath("1","3"))
+    print(g.isPath("1","4"))
