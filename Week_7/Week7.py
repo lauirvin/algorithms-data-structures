@@ -75,19 +75,25 @@ class Graph:
 
 
 if __name__ == "__main__":
+    vertex1 = "1"
+    vertex2 = "2"
+    vertex3 = "3"
+    vertex4 = "4"
+    vertex5 = "5"
     g = Graph()
-    g.add_vertex("1")
-    g.add_vertex("2")
-    g.add_vertex("3")
-    g.add_vertex("4")
-    g.add_vertex("5")
-    g.add_directed_edge("1", "2")
-    g.add_directed_edge("1", "5")
-    g.add_directed_edge("1", "3")
-    g.add_directed_edge("2", "5")
-    g.add_directed_edge("2", "4")
+    g.add_vertex(vertex1)
+    g.add_vertex(vertex2)
+    g.add_vertex(vertex3)
+    g.add_vertex(vertex4)
+    g.add_vertex(vertex5)
+    g.add_directed_edge(vertex1, vertex2)
+    g.add_directed_edge(vertex1, vertex5)
+    g.add_directed_edge(vertex1, vertex3)
+    g.add_directed_edge(vertex2, vertex5)
+    g.add_directed_edge(vertex2, vertex4)
+    print(g.display())
 
     print(g.display())
-    print(g.depth_first_search("1"))
-    print(g.isPath("1","3"))
-    print(g.isPath("1","4"))
+    print(g.depth_first_search(vertex1))
+    print(g.isPath(vertex1, vertex3))
+    print(g.isPath(vertex1, vertex4))
