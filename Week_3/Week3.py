@@ -1,5 +1,3 @@
-# Week 3 Lab
-
 # 1. Write a program that reads n words from the standard input, separated by spaces and prints them mirrored (the mirroring function should be implemented recursively). What is the time complexity of the algorithm? Use the BigO notation to express it.
 
 import unittest

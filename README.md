@@ -1,3 +1,7 @@
-#210CT Module Coursework
+# Programming Algorithms and Data Structures with Python3
 
-Year 2 Semester 1 210CT Module Coursework
+## Built With
+* [Python] (https://www.python.org/) - Programming language used
+
+## Authors
+* **Irvin Ives Lau** - *Initial work* - [lauirvin](https://github.com/lauirvin)

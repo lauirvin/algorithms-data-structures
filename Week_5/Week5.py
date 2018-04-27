@@ -25,13 +25,13 @@ class List(object):
             self.tail = x
 
     def delete(self, N):
-        head = self.head                            
-        while head:                         
-            if head.value == N:                     #if value of head is == N do not proceed
-                if head.prev != None:               #if head.prev is not None do not proceed
-                    head.prev.next = head.next 
-                if head.next != None:               #if head.next is not None do not proceed
-                    head.next.prev = head.prev 
+        head = self.head
+        while head:
+            if head.value == N:  # if value of head is == N do not proceed
+                if head.prev != None:  # if head.prev is not None do not proceed
+                    head.prev.next = head.next
+                if head.next != None:  # if head.next is not None do not proceed
+                    head.next.prev = head.prev
                 else:
                     self.head = head.next
                 return True

@@ -1,4 +1,3 @@
-
 class BinTreeNode(object):
 
     def __init__(self, value):
@@ -36,15 +35,16 @@ def searchNode(tree, target):
     else:
         return searchNode(tree.right, target)
 
+
 def deleteNode(tree, value):
     parent = None
     node = searchNode(tree, value)
-    
-    #case 1: data not found
+
+    # case 1: data not found
     if node is None or node.value != value:
         return False
 
-    #case 2: no children
+    # case 2: no children
     elif node.left is None and node.right is None:
         if value < node.parent.value:
             node.parent.left = None
@@ -52,7 +52,7 @@ def deleteNode(tree, value):
             node.parent.right = None
         return True
 
-    #case 3: left child only
+    # case 3: left child only
 
     elif node.left and node.right is None:
         if value < node.parent.value:
@@ -61,7 +61,7 @@ def deleteNode(tree, value):
             node.parent.right = node.left
         return True
 
-    #case 4: remove-node has right child only
+    # case 4: remove-node has right child only
     elif node.left is None and node.right:
         if value < node.parent.value:
             node.parent.left = node.right
@@ -69,7 +69,7 @@ def deleteNode(tree, value):
             node.parent.right = node.right
         return True
 
-    #case 5: remove-node has left and right children
+    # case 5: remove-node has left and right children
     else:
         delNodeParent = node
         delNode = node.right
@@ -88,6 +88,7 @@ def deleteNode(tree, value):
                 delNodeParent.left = None
             else:
                 delNodeParent.right = None
+
 
 def max(self, node):  # finding the max value (from the left subtree)
     root = node
@@ -127,6 +128,6 @@ if __name__ == '__main__':
     tree_insert(t, 3)
     tree_insert(t, 4)
     tree_insert(t, 11)
-    #print(searchNode(t, 11).value) - search value
-    deleteNode(t, 4) # deleting the node 11
+    # print(searchNode(t, 11).value) - search value
+    deleteNode(t, 4)  # deleting the node 11
     in_order(t)

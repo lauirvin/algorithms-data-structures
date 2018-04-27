@@ -1,10 +1,9 @@
-# Week 2 Lab
-
 # 1. Read the degree of two polynomials and their coefficients, all integers, from the standard input.
 
 # a) Write the pseudocode for adding two polynomials - Written out in Python for algorithm testing.
 
 import unittest
+
 
 def polynomialAddition(p1, p2, degree1, degree2):
     output = []
@@ -22,7 +21,8 @@ def polynomialAddition(p1, p2, degree1, degree2):
     print("The Res is: ", output)
     print("The Degree is: ", finalDegree)
 
-polynomialAddition([3,1,9], [2,1,2,1], 2, 3)
+
+polynomialAddition([3, 1, 9], [2, 1, 2, 1], 2, 3)
 
 # b) Given the following pseudocode, first understand how it works, then implement the code for multiplying the two polynomials in the programming language of your choice
 
@@ -37,18 +37,20 @@ def polynomialMultiplication(p1, p2, degree1, degree2):
             res[i + j] = res[i + j] + (p1[i] * p2[j])
 
     print(res)
-    #return (res)
-    
+    # return (res)
 
 
 class IsAnagramTests(unittest.TestCase):
 
     def testOne(self):
-        self.assertTrue(polynomialMultiplication([3,1,9], [2,1,2,1], 2, 3))
+        self.assertTrue(polynomialMultiplication(
+            [3, 1, 9], [2, 1, 2, 1], 2, 3))
+
 
 def main():
     unittest.main()
 
+
 if __name__ == '__main__':
-    
+
     main()

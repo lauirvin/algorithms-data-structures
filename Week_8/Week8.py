@@ -1,5 +1,3 @@
-# Week 7 Lab
-
 # 1. Implement an unweighted and undirected graph data structure in the programming language of your choice, where the nodes consist of positive integers. You can either use an adjacency matrix or an adjacency list approach. You must use Object Oriented Programming for this task.
 
 
@@ -24,7 +22,7 @@ class Stack:
 
 
 class vertex(object):
-    def __init__(self, label, edges = []):
+    def __init__(self, label, edges=[]):
         self.label = label
         self.edges = []
 

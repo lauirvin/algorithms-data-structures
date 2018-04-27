@@ -1,5 +1,3 @@
-# Week 4 Lab
-
 # 1. Manually arrange the sequence [2 7 9 4 1 5 3 6 0 8] in ascending order using insertion sort, bubble sort and selection sort, showing at each step the new configuration of the sequence.
 
 def insertionSort(l):
